@@ -1,0 +1,352 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+:root {
+  --black: #000;
+  --cafe-light: #c2bd74;
+ 
+}
+
+body {
+  background-image: url('../img/pizarra2.jpg');
+  background-size: cover;
+  font-family: 'Prompt', sans-serif;
+}
+
+.container {
+  max-width: 100%;
+  width: 400px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+main {
+  margin: 1rem 2rem 0 2rem;
+}
+
+/*PERFIL*/
+
+.perfil h1 {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.perfil span { 
+    color: darkblue;
+    letter-spacing: 4px;
+    font-weight: bolder;
+}
+  
+
+#fecha {
+  color: darkblue;
+  padding: 50px 15px 5px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/*Agregar Tarea*/
+
+.agregar-tarea {
+  width: 100%;
+  height: 70px;
+  border-radius: 15px;
+  padding: 10px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.agregar-tarea button {
+  background-color: #a38b00de;
+  color: var(--black);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.agregar-tarea button:hover {
+  background-color: var(--cafe-light);
+  transform: scale(1.05);
+}
+
+.btn {
+  margin-top: 1rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 0;
+}
+
+#new-item-section {
+  margin: 1rem auto;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+
+#new-item-section .new-item-card {
+  transform: rotate(-6deg);
+  background: rgb(255, 255, 147);
+  color: #000;
+  padding: 1em;
+  text-align: center;
+  box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  -webkit-box-shadow: 5px 5px 7px rgba(33, 33, 33, .7);
+  -moz-box-shadow: 5px 5px 7px rgba(33, 33, 33, 1);
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 325px;
+  max-width: 600px;
+  margin: auto;
+  font-family: "Reenie Beanie", arial, sans-serif;
+  font-size: 180%;
+  font-size: 140%;
+  font-weight: bold;
+  padding-bottom: 10px;
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: visible;
+}
+
+#new-item-section .new-item-card::before {
+  content: "";
+  width: 20px; /* Tamaño del círculo */
+  height: 20px; /* Tamaño del círculo */
+  background: red;
+  border-radius: 50%; /* Hacerlo circular */
+  position: absolute;
+  top: -10px; /* Ajustar la posición vertical del círculo */
+  left: 50%; /* Ajustar la posición horizontal del círculo */
+  transform: translateX(-50%); /* Centrar horizontalmente el círculo */
+}
+
+/* Estilos para el ícono de eliminación */
+.delete-card {
+  position: absolute;
+  top: 5px; /* Ajusta la posición verticalmente */
+  right: 5px; /* Ajusta la posición horizontalmente */
+  cursor: pointer; /* Cambia el cursor a indicar que es clickeable */
+}
+
+/* Estilos para el contenedor de la tarjeta */
+.new-item-card {
+  position: relative; 
+}
+
+
+#new-item-section .new-item-card:nth-child(even) {
+  transform: rotate(4deg);
+  -o-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  position: relative;
+  top: 5px;
+}
+
+#new-item-section .new-item-card:nth-child(3n) {
+  transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  position: relative;
+  top: -5px;
+}
+
+#new-item-section .new-item-card:nth-child(5n) {
+  transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  position: relative;
+  top: -10px;
+}
+
+
+
+#new-item-section .new-item-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+#new-item-section .new-item-card .cover {
+  aspect-ratio: 3/4;
+  width: 100%;
+  object-fit: contain;
+  margin: 0 auto 1rem auto;
+
+}
+
+#new-item-section .new-item-card .inline h3,
+#new-item-section .new-item-card .inline p {
+  display: inline;
+}
+
+#new-item-section .new-item-card .inline p {
+  margin-left: 1rem;
+}
+
+#new-item-section .new-item-card button {
+  margin: 1rem 0.5rem 0 auto;
+  background-color: #a38b00de;
+  width: 40%;
+  color: white;
+  transition-duration: 0.2s;
+}
+
+#new-item-section .new-item-card button:hover {
+  background-color: #a0bcd3c7;
+}
+
+
+.btn-section {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.btn-section .btn {
+  margin: auto;
+  width: 40%;
+}
+
+.modal-bg {
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+}
+
+.modal-task {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f0f074; /* Fondo amarillo claro */
+  padding: 20px;
+  border: 2px solid black; /* Borde negro */
+  border-radius: 10px;
+  max-width: 600px; /* Ancho máximo */
+  text-align: center;
+}
+
+.modal-task h2 {
+  margin-bottom: 10px;
+}
+
+.modal-task p {
+  margin: 10px 0;
+}
+
+.modal-task-add {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.modal-task-add h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.modal-task-add label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.modal-task-add input[type="text"],
+.modal-task-add textarea,
+.modal-task-add select,
+.modal-task-add input[type="date"] {
+  width: calc(100% - 10px);
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-task-add button {
+  padding: 8px 20px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.modal-task-add #btn-cancel {
+  background-color: #ff5c5c;
+  color: white;
+}
+
+/* Estilos para el botón 'Agregar Tarea' */
+.modal-task-add #btn-add-task {
+  background-color: #4caf50;
+  color: white;
+}
+
+.modal-task-edit {
+  background: #fff;
+  max-width: 500px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para el título del modal */
+.modal-task-edit h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* Estilos para etiquetas y campos de edición */
+.modal-task-edit label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-task-edit input,
+.modal-task-edit textarea,
+.modal-task-edit select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-task-edit button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Estilos para el botón de guardar cambios */
+.modal-task-edit button#btn-save-changes {
+  background-color: #27ae60;
+}

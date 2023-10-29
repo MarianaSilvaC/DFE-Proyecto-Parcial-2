@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+    <title>TO-DO List</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+
+<body>
+    <main class="f-display">
+        <div class="container">
+            <div class="perfil">
+                <div id="fecha"></div>
+                <!-- Aquí se colocara la fecha automaticamente dependiendo del dia que sea -->
+                <h1>Hola, Alumno</h1>
+                <span>Lista de Tareas pendientes</span>
+            </div>
+            <div class="agregar-tarea">
+                <button id="agregarBtn">Agregar</button>
+            </div>
+            <div id="new-item-section" class="f-display">
+                <!-- Aquí se generan dinámicamente las tarjetas -->
+            </div>
+    </main>
+    <script type="module" src="../assets/scripts/modal.js"></script>
+    <script type="module" src="../assets/scripts/generarTarjetas.js"></script>
+    <script type="module" src="../assets/scripts/fecha.js"></script>
+    <script type="module" src="../assets/scripts/agregarTarea.js"></script>
+</body>
+
+</html>
